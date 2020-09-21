@@ -5,14 +5,19 @@
     list-style: none;
 }
 
+body {
+    background-image: url(../MBg.jpeg);
+    background-repeat: repeat-y;
+}
+
 .header {
     width: 100%;
     height: 80px;
     display: block;
-    background-color: #101010;
+    position: fixed;
+    background-color: black;
     /* background-color: white; */
 }
-
 
 .inner-header {
     width: 90%;
@@ -65,7 +70,7 @@
 .navigation > a > li {
     display: table-cell;
     vertical-align: middle;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
     height: 100%;
     color: white;
     font-size: 20px;
@@ -89,7 +94,7 @@
 }
 
 @media (max-width: 952px){
-    .header > .inner-header > .logo-container > h1{
+    .logo-container > h1{
         font-size: 24px;
     }
     .navigation > a > li {
@@ -105,32 +110,78 @@
     .navigation{
         position: fixed;
         display: table;
-        width: 100%;
+        width: 20%;
         height: 100vh;
         background: #2c3e50;
         top: 80px;
-        left: 0;
+        left: 120%;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
     }
 
     .navigation > a {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         height: auto;
         width: 100%;
-        display: block;
+        display: table-row;
         float: left;
+        background: green;
+        border-radius: 50px;
+    }
+
+    .navigation > a:hover {
+        background: rgba(100, 100, 100, 0.5);
+        border-radius: 50px;
     }
 
     .navigation > a > li {
-        text-align: center;
+        /* align-items: center; */
+        text-align: left;
         float:left;
         width: 100%;
     }
 
-    /* #check:checked ~ ul{
-        left: 0;
+    #check:checked ~ .inner-header > .navigation {
+        position: fixed;
+        display: table;
+        width: 20%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: 80%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    /* #check:checked ~ .inner-header > .navigation > a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: auto;
+        width: 100%;
+        display: table-row;
+        float: left;
+    }
+
+    #check:checked ~ .inner-header > .navigation > a > li {
+        align-items: center;
+        float:left;
+        width: 100%;
+    } */
+
+    /* #check:checked ~ .navigation{
+        background: red;
     }    */
-    
+
 }
+
+.article-body {
+    width: 70%;
+    overflow-y: auto;
+    /* height: 100%; */
+    margin: 0 auto;
+    background: rgba(220, 220, 220, 0.95);
+}
+
