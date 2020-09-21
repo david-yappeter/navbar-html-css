@@ -5,6 +5,11 @@
     list-style: none;
 }
 
+body {
+    background-image: url(../matrix.jpg);
+    background-repeat: repeat-y;
+}
+
 .header {
     width: 100%;
     height: 80px;
@@ -95,6 +100,10 @@
     .navigation > a > li {
         font-size: 15px;
     }
+
+    .article-body > h1 {
+        font-size: 27px;
+    }
 }
 
 @media (max-width: 700px){
@@ -105,32 +114,65 @@
     .navigation{
         position: fixed;
         display: table;
-        width: 100%;
+        width: 30%;
         height: 100vh;
-        background: #2c3e50;
+        background: transparent;
         top: 80px;
-        left: 0;
+        left: 130%;
         text-align: center;
         transition: all .5s;
     }
 
     .navigation > a {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        background-color: darkgreen;
+        border-radius: 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         height: auto;
         width: 100%;
         display: block;
         float: left;
     }
 
+    .navigation > a:hover {
+        border-radius: 30px;
+    }
+
     .navigation > a > li {
-        text-align: center;
+        /* text-align: center; */
+        text-align: left;
         float:left;
         width: 100%;
     }
 
-    /* #check:checked ~ ul{
-        left: 0;
-    }    */
-    
+    #check:checked ~ .inner-header > .navigation {
+        left: 70%;
+    }
+
+    .article-body > h1 {
+        font-size: 22px;
+    }
+
 }
+
+.article-body {
+    width: 70%;
+    margin: 0 auto;
+    /* padding-top: 80px; */
+    background-color: rgba(220, 220, 220, 0.95);
+}
+
+.article-body > h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.article-body > * {
+    margin-bottom: 5px;
+}
+
+/* .article-body > article {
+    
+} */
