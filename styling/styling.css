@@ -120,7 +120,7 @@ body {
         height: 100vh;
         background: transparent;
         top: 80px;
-        left: 130%;
+        left: 90%;
         text-align: center;
         transition: all 0.5s;
     }
@@ -145,15 +145,11 @@ body {
         border-radius: 50px;
     }
 
-    .navigation > a:hover {
-        border-radius: 30px;
-    }
-
     .navigation > a > li {
-        /* text-align: center; */
         text-align: left;
         float:left;
         width: 100%;
+        /* text-align: center; */
     }
 
     #check:checked ~ .inner-header > .navigation {
@@ -163,6 +159,22 @@ body {
     .article-body > h1 {
         font-size: 22px;
     }
+
+    #check:checked ~.inner-header .navigation  .profile-image {
+        visibility: visible;
+    }
+
+    .navigation li i{
+        display: inline-block;
+    }
+
+    #check:checked ~ .inner-header .navigation li span {
+        display: inline-block;
+    }
+
+}
+
+@media (max-width: 500px){
 
 }
 
@@ -185,3 +197,20 @@ body {
 /* .article-body > article {
     
 } */
+
+.navigation .profile-image {
+    visibility: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.navigation i {
+    display: none;
+}
+
+.navigation li span {
+    display: none;
+}
