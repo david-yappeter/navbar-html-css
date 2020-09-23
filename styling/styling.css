@@ -11,6 +11,7 @@ body {
 }
 
 .header {
+    z-index: 10;
     position: fixed;
     width: 100%;
     height: 80px;
@@ -84,11 +85,11 @@ body {
     font-size: 30px;
     color: white;
     float: right;
-    line-height: 80px;
     margin-right: 30px;
     margin-left: 10px;
     cursor: pointer;
     display: none;
+    line-height: 80px;
 }
 
 #check {
@@ -96,6 +97,7 @@ body {
 }
 
 @media (max-width: 952px){
+
     .logo-container > h1{
         font-size: 24px;
     }
@@ -109,6 +111,10 @@ body {
 }
 
 @media (max-width: 700px){
+
+    .header {
+        height: 80px;
+    }
 
     .inner-header .navigation .profile-image{
         display: inline;
@@ -191,27 +197,61 @@ body {
 
 @media (max-width: 500px){
 
+    .article-body {
+        font-size: 14px;
+        /* padding-top: 60px; FIX THIS */
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .checkbtn {
+        line-height: 60px;
+    }
+
+    .checkbtn > i {
+        font-size: 25px;
+    }
+
+    .inner-header .navigation{
+        left: 100%;
+    }
+
+    .inner-header .navigation li{
+        font-size: 10px;
+    }
+
+    .inner-header .navigation .profile-image{
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 .article-body {
     width: 70%;
-    margin: 0 auto;
     padding-top: 80px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: rgba(220, 220, 220, 0.95);
 }
 
 .article-body > h1 {
     font-family: cursive;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .article-body > * {
     margin-bottom: 5px;
 }
 
-/* .article-body > article {
-    
-} */
+.article-body article {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 .navigation .profile-image {
     visibility: hidden;
@@ -224,4 +264,48 @@ body {
 
 .navigation i {
     display: none;
+}
+
+.logo-container span {
+    color: rgb(4, 160, 233);
+}
+
+.article-body article {
+    width: 100%;
+    float: left;
+    border: 1px solid black;
+    padding-right: 10px;
+    /* padding-left: 10px; */
+}
+
+.latest-news-area .news-block {
+    transition: opacity 0.5s, transform 0.25s;
+}
+
+.latest-news-area .news-block:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: opacity 0.5s, transform 0.25s;
+}
+
+.news-block .big-desc {
+    font-size: 25px;
+    margin-top: 5px;
+    color: black;
+    font-weight: bolder;
+}
+
+.news-block .desc {
+    font-size: 14px;
+}
+
+.article-image {
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+
+.latest-news-area {
+    display: block;
 }
