@@ -309,3 +309,7 @@ body {
 .latest-news-area {
     display: block;
 }
+
+.latest-news-area .news-block {
+    margin-bottom: 10px;
+}
