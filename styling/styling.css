@@ -109,6 +109,19 @@ body {
 }
 
 @media (max-width: 700px){
+
+    .inner-header .navigation .profile-image{
+        display: inline;
+        opacity: 0;
+        margin-left: 100px;
+        transition: all 1s;
+    }
+
+    .navigation li span {
+        opacity: 0;
+        transition: all 1s;
+    }
+
     .checkbtn {
         display: block;
     }
@@ -162,6 +175,8 @@ body {
 
     #check:checked ~.inner-header .navigation  .profile-image {
         visibility: visible;
+        opacity: 1;
+        margin-left: 0px;
     }
 
     .navigation li i{
@@ -169,7 +184,7 @@ body {
     }
 
     #check:checked ~ .inner-header .navigation li span {
-        display: inline-block;
+        opacity: 1;
     }
 
 }
@@ -200,17 +215,13 @@ body {
 
 .navigation .profile-image {
     visibility: hidden;
+    display: none;
     width: 100px;
     height: 100px;
     margin: 0;
     margin-top: 20px;
-    margin-left: 0px;
 }
 
 .navigation i {
-    display: none;
-}
-
-.navigation li span {
     display: none;
 }
